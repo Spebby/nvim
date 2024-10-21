@@ -6,17 +6,8 @@ return {
     local telescope = require("telescope")
     local builtin = require("telescope.builtin")
     local tsactions = require("telescope.actions")
-    local fbactions = require("telescope").extensions.file_browser.actions
 
     telescope.setup({
-      defaults = {
-        mappings = {
-          ["n"] = {
-            ["e"] = tsactions.move_selection_next,
-            ["i"] = tsactions.move_selection_previous,
-          },
-        },
-      },
       pickers = {
         buffers = {
           initial_mode = "normal",
@@ -33,20 +24,6 @@ return {
           hijack_netrw = true,
           cwd_to_path = true,
           theme = "dropdown",
-          mappings = {
-            ["n"] = {
-              ["n"] = fbactions.goto_parent_dir,
-              ["e"] = tsactions.move_selection_next,
-              ["i"] = tsactions.move_selection_previous,
-              ["o"] = tsactions.select_default,
-
-              ["s"] = tsactions.toggle_selection + tsactions.move_selection_worse,
-              ["."] = fbactions.toggle_hidden,
-              ["m"] = fbactions.create_from_prompt,
-              ["v"] = fbactions.move,
-              ["<S-X>"] = fbactions.remove,
-            },
-          },
         },
       },
     })
