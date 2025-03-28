@@ -35,11 +35,6 @@ return {
           theme = "dropdown",
           mappings = {
             ["n"] = {
-              ["n"] = fbactions.goto_parent_dir,
-              ["e"] = tsactions.move_selection_next,
-              ["i"] = tsactions.move_selection_previous,
-              ["o"] = tsactions.select_default,
-
               ["s"] = tsactions.toggle_selection + tsactions.move_selection_worse,
               ["."] = fbactions.toggle_hidden,
               ["m"] = fbactions.create_from_prompt,

@@ -1,3 +1,6 @@
+return {}
+
+--[[
 return {
   "stevearc/conform.nvim",
   event = { "BufWritePre" },
@@ -45,3 +48,5 @@ return {
     end, { desc = "Format" })
   end,
 }
+]]
+--

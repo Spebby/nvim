@@ -1,0 +1,20 @@
+require("lazy").setup({
+  -- Add LazyVim and import its plugins
+  -- { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+  -- Additoinal plugins
+  { import = "config.plugins" },
+  { import = "config.plugins.lsp" },
+  { import = "config.plugins.lang" },
+
+    -- add but do not install all LazyVim plugins
+    {
+        'LazyVim/LazyVim',
+        event = "VeryLazy",
+        opts = {
+            spec = {
+                { import = "LazyExtra.lang.typescript" },
+                { import = "LazyExtra.lang.json" },
+            }
+        }
+    }
+}, {

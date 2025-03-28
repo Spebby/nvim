@@ -24,6 +24,11 @@ return {
         "rust",
         "toml",
         "regex",
+        "typescript",
+        "yaml",
+        "json",
+        "regex",
+        "tsx",
       },
     })
   end,
